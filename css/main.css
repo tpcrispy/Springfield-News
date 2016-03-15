@@ -1,62 +1,80 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
+* {
     margin: 0;
     padding: 0;
+    
+    /* box-sizing: border-box: The width and height properties (and min/max properties) 
+    includes content, padding and border, but not the margin*/
+    box-sizing: border-box;
 }
 
-textarea {
-    resize: vertical;
-}
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
+body {
+    background-color: #f0f0f0;
     color: #000;
-    padding: 0.2em 0;
+    font-size: 20px;
+    font-family: Arial;
+    min-width: 1320px;
+    /* The text-rendering CSS property provides information to the rendering engine 
+    about what to optimize for when rendering text.
+    optimizeLegibility: The browser emphasizes legibility over rendering speed and 
+    geometric precision. This enables kerning and optional ligatures.*/
+    text-rendering: optimizeLegibility:;
 }
 
+h4 {
+    font-size: 80%;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+a:link,
+a:visited {
+    color: #000;
+}
 
-   header {
+a:hover {
+    text-decoration: none;
+    color: blue;
+}
+.no-padding {
+    padding: 0;
+}
+
+.fa {
+    font-size: 115%;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #55acee;
+}
+
+.fa-linkedin {
+    color: #007bb5;
+}
+
+.fa-instagram {
+    color: #125688;
+}
+
+.fa-plus {
+    margin-right: 15px;
+    font-size: 80%;
+}
+
+/*================================*/
+/*  SECTION*/
+/*================================*/
+section {
+    padding: 0 20px;
+    clear: both;
+}
+
+/*================================*/
+/*  HEADER*/
+/*================================*/
+
+header {
     background-color: #000;
     color: #fff;
 }
@@ -114,10 +132,8 @@ header li {
 }
 
 .delivery {
-    font-size: 88%;
+    font-size: 78%;
 }
-
-
 
 nav {
     border-top: 1px solid #4e4d4d;
@@ -128,41 +144,31 @@ nav {
 nav ul li {
     list-style: none;
     display: inline-block;
-    font-size: 100%;
+    font-size: 70%;
     padding: 13px 10px;
     border-left: 1px solid #4e4d4d;
     margin-top: -1px;
 }
 nav ul li:first-child{border-top: 1px solid #009cff;}
 nav ul li:first-child:hover {background-color: #009cff;}
-
 nav ul li:nth-child(2){border-top: 1px solid #f00;}
 nav ul li:nth-child(2):hover {background-color: #f00;}
-
 nav ul li:nth-child(3){border-top: 1px solid #f0ff00;}
 nav ul li:nth-child(3):hover {background-color: #f0ff00;}
-
 nav ul li:nth-child(4){border-top: 1px solid #c300ff;}
 nav ul li:nth-child(4):hover {background-color: #c300ff;}
-
 nav ul li:nth-child(5){border-top: 1px solid #ff00f3;}
 nav ul li:nth-child(5):hover {background-color: #ff00f3;}
-
 nav ul li:nth-child(6){border-top: 1px solid #00ff0c;}
 nav ul li:nth-child(6):hover {background-color: #00ff0c;}
-
 nav ul li:nth-child(7){border-top: 1px solid #ff9000;}
 nav ul li:nth-child(7):hover {background-color: #ff9000;}
-
 nav ul li:nth-child(8){border-top: 1px solid #5700ff;}
 nav ul li:nth-child(8):hover {background-color: #5700ff;}
-
 nav ul li:nth-child(9){border-top: 1px solid #ff00b4;}
 nav ul li:nth-child(9):hover {background-color: #ff00b4;}
-
 nav ul li:nth-child(10){border-top: 1px solid #efec3f;}
 nav ul li:nth-child(10):hover {background-color: #efec3f;}
-
 nav ul li:nth-child(11){border-top: 1px solid #38cf7a;}
 nav ul li:nth-child(11):hover {background-color: #38cf7a;}
 
@@ -202,16 +208,12 @@ nav ul li a:visited {
     font-size: 83%;
 }
 
-
-
-
-
 /*================================*/
 /*  BREAKING NEWS*/
 /*================================*/
 .breaking-news-header {
     background-color: rgb(247, 0, 0);
-    padding: 2px;
+    padding: 10px;
     color: #fff;
     margin-bottom: 50px;
 }
@@ -219,7 +221,7 @@ nav ul li a:visited {
 .breaking-news {
     width: 9%;
     line-height: 18px;
-    font-size: 120%;
+    font-size: 68%;
     font-weight: bolder;
     text-align: center;
     background-color: rgba(105, 15, 15, 0.9);
@@ -233,8 +235,6 @@ nav ul li a:visited {
 .breaking-news-headline {
     display: inline-block;
     vertical-align: middle;
-    font-size: 200%;
-    text-align: center;
 }
 
 .breaking-news-headline a:link,
@@ -246,131 +246,298 @@ nav ul li a:visited {
     text-decoration: underline;
 }
 
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
+/*================================*/
+/*  SECTION-CARDS*/
+/*================================*/
+.section-cards {
+    width: 100%;
+    float: left;
+    margin-bottom: -1px;
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
+.cards-col-60 {
+    width: 672px;
+    float: left;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #dedede;
+    position: relative;
+}
+.cards-col-60 img{
+    width: 100%;
+;
+}
+.cards-col-10 {
+    width: 232px;
+    float: left;
+    border-top: 1px solid #dedede;
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
+.cards-col-10 img {
+    width: 100%;
+    height: 140px;
+    border-top: 1px solid #fff;
 }
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+.cards-col-10 a:first-child img{
+    border-top: none;
+}
+
+.cards-col-30 {
+    width: 376px;
+    float: left;
+}
+
+.caption {
+    color: white;
+    font-weight: bolder;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.caption-text{
+    font-size: 68%;
     position: absolute;
-    width: 1px;
+    top: 46px;
+    left: 0;
+    padding: 9px;
+    width: 100%;
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
+.main-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 30px;
+    padding: 10px;
+    font-size: 196%;
+    line-height: 37px;
+}
+
+.category {
+    position: absolute;
+    left: 0;
+    margin: 10px;
+    font-size: 69%;
+    font-weight: bolder;
+    padding: 0px 5px;
+    box-shadow: 10px 10px 12px -7px rgba(0,0,0,0.75);
+    color: white;
+    z-index: 1000;
+}
+
+.category-topics {
+    top: 0;
+}
+
+.top-story {
+    background-color: red;
+}
+
+.card-1, .card-2, .card-3 {
+    position: relative
+}
+
+.business { background-color: purple;}
+.health {   background-color: orange; top: -58px;}
+.sports { background-color: #0a0; top: -58px;}
+/*================================*/
+/*  SECTION-TOP-STORIES*/
+/*================================*/
+
+.top-stories-container {
+
+}
+
+.top-stories-list {
     margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+    padding: 0;
 }
 
-.invisible {
-    visibility: hidden;
+.top-stories-list li {
+    list-style: none;
+    padding: 6px 0px 7px 15px;
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    background-color: whitesmoke;
+    transition: background-color 0.3s;
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+.top-stories-list li:hover {
+    background-color: #fff;
 }
 
-.clearfix:after {
-    clear: both;
+.top-stories-list li:first-child {
+    border-top: 1px solid #dedede;
+    background-color: #d5d5d5;
 }
 
-.clearfix {
-    *zoom: 1;
+.top-stories-list li:last-child {
+    padding-bottom: 10px;
+    border-bottom: none;
 }
 
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
+.top-stories a:link,
+.top-stories a:visited {
+    font-size: 68%;
+    font-weight: bolder;
+    color: #3B3B3B;
+}
+/*================================*/
+/*  SECTION-ELECTIONS*/
+/*================================*/
+.section-election { 
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+}
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+.blue {color:#2d75c8;}
+.red {color: #fb2f2f;}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+.elections-col-70 {
+    width: 904px;
+    border-right: 1px solid #dedede;
+    float:left;
+    background-color: white;
+}
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+.elections-col-70 h2 {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    margin: 10px;
+    text-align: center;
+}
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+.nominees-container {
+    width: 100%;
+    border-left: 1px solid #dedede;
+    background-image: url('http://rickywid.github.io/springfield-today/images/bg.png');
+    background-position: center;
+    background-size: cover;
+}
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+.nominees-container ul li {
+    list-style: none;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    margin: 20px;
+}
 
-    thead {
-        display: table-header-group;
-    }
+.nominees-container ul li span img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+.nominees {
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+}
 
-    img {
-        max-width: 100% !important;
-    }
+.nominees-center {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    color: #fff;
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+}
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.candidate {
+    display: block;
+}
+
+.poll-pct {
+    font-size: 200%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bar {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(64, 201, 255, 0.35);
+}
+
+.bar-inner {
+    background-color: rgb(230, 87, 87);
+    height: 10px;
+}
+
+.poll-homer {width: 90%;}
+.poll-wiggum {width: 7%;}
+.poll-burns {width: 2%;}
+.poll-krabapel {width: 1%;}
+
+.nominees-graphics {
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nominees-graphics > li {
+    display: block;
+    background-color: none;
+}
+
+.nominees-graphics li:last-child {
+    text-align: center;
+    border: 1px solid white;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.nominees-graphics li:last-child h1 {
+    margin: 0;
+    font-size: 126%;
+}
+
+.nominees-graphics li img {
+    width: 100%;
+    height: auto;
+}
+
+/*================================*/
+/*  TRENDING*/
+/*================================*/
+
+.trending-col-30 {
+    width: 376px;
+    float: left;
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+}
+
+.trending-title {
+    padding: 10px;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    background-color: #d5d5d5;
+}
+
+.trending-stories ul {
+    border-right: 1px solid #dedede;
+}
+
+.trending-stories ul li:hover {
+    background-color: #fff;
+}
+
+.trending-stories ul li{
+    list-style: none;
+    padding: 7px 0px 7px 15px;
+    font-size: 70%;
+    border-bottom: 1px solid #dedede;
+    background-color: whitesmoke;
+}
+
+.trending-stories ul li:last-child {
+    border-bottom: none;
+}
+
+.trending-stories ul li a:link,
+.trending-stories ul li a:visited {
+    color: #000;
+    font-size: 90%;
 }
